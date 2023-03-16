@@ -9,10 +9,10 @@ var counter = setInterval(function () {
   var minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
   var segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
 
-  document.getElementById("counter-days").innerHTML = dias + "<br/>dies";
-  document.getElementById("counter-hores").innerHTML = horas + "<br/>hores";
-  document.getElementById("counter-mins").innerHTML = minutos + "<br/>minuts";
-  document.getElementById("counter-secs").innerHTML = segundos + "<br/>segons";
+  document.getElementById("counter-days").innerHTML = dias + "<br/>Dies";
+  document.getElementById("counter-hores").innerHTML = horas + "<br/>Hores";
+  document.getElementById("counter-mins").innerHTML = minutos + "<br/>Minuts";
+  document.getElementById("counter-secs").innerHTML = segundos + "<br/>Segons";
 
   if (tiempoRestante < 0) {
     clearInterval(counter);
