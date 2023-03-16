@@ -73,7 +73,7 @@
 @media only screen and (min-width: 1200px) {
     #h1-2 {
         color: rgba(0, 0, 255, 0.5);
-        top: 40%;
+        top: 39%;
         transform: translate(50%, -50%) rotate(90deg);
     }
 }
