@@ -33,7 +33,7 @@
         color: rgba(0, 0, 255, 0.5);
         width: 100%;
         font-size: 8vh;
-        transform: translate(25%, 100%) rotate(0deg);
+        transform: translate(25%, 600%) rotate(0deg);
 
     }
 }
@@ -44,7 +44,7 @@
         color: rgba(0, 0, 255, 0.5);
         width: 100%;
         font-size: 8vh;
-        transform: translate(-7%, 250%) rotate(0deg);
+        transform: translate(-7%, -250%) rotate(0deg);
 
     }
 }
