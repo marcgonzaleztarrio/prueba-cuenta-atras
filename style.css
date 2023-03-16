@@ -56,7 +56,9 @@
 @media only screen and (min-width: 992px) {
     #h1-2 {
         color: rgba(0, 0, 255, 0.5);
-        transform: translate(-350%, 410%) rotate(0deg);
+        transform: translate(54%, 420%) rotate(0deg);
+        font-size: 10vh;
+
     }
 }
 
@@ -65,7 +67,9 @@
 @media only screen and (min-width: 992px) {
     #h1 {
         color: rgba(0, 0, 255, 0.5);
-        transform: translate(70%, -90%) rotate(0deg);
+        transform: translate(7%, -180%) rotate(0deg);
+        font-size: 10vh;
+
     }
 }
 
@@ -77,6 +81,8 @@
         color: rgba(0, 0, 255, 0.5);
         top: 40%;
         transform: translate(50%, -50%) rotate(90deg);
+        font-size: 10vh;
+
     }
 }
 
@@ -85,7 +91,9 @@
     #h1 {
         color: rgba(0, 0, 255, 0.5);
         top: 0%;
-        transform: translate(-50%, 300%) rotate(-90deg);
+        transform: translate(-50%, 30%) rotate(-90deg);
+        font-size: 10vh;
+
     }
 }
 
