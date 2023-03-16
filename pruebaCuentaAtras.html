@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contador Regresivo</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      #contador-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #contador,
+      #imagen {
+        text-align: center;
+      }
+
+      #imagen {
+        display: none;
+        width: 400px;
+      }
+
+      #contador {
+        font-size: 2em;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contador-div">
+      <div id="contador"></div>
+      <img
+        id="imagen"
+        src="MARIA.jpeg"
+        alt="Imagen cuando el contador llega a cero"
+      />
+    </div>
+
+    <script>
+      var fechaObjetivo = new Date("Mar 21, 2023 12:00:00").getTime();
+      var contador = setInterval(function () {
+        var fechaActual = new Date().getTime();
+        var tiempoRestante = fechaObjetivo - fechaActual;
+        var dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
+        var horas = Math.floor(
+          (tiempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutos = Math.floor(
+          (tiempoRestante % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        var segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
+
+        document.getElementById("contador").innerHTML =
+          "Faltan " +
+          dias +
+          " días, " +
+          horas +
+          " horas, " +
+          minutos +
+          " minutos y " +
+          segundos +
+          " segundos para el 21 de marzo.";
+
+        if (tiempoRestante < 0) {
+          clearInterval(contador);
+          document.getElementById("contador").style.display = "none";
+          document.getElementById("imagen").style.display = "block";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
