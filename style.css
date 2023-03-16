@@ -11,34 +11,58 @@
     position: fixed;
     top: 40%;
     left: 10vh;
-    transform: translate(-50%, -50%) rotate(-90deg);
     display: flex;
 }
 
-@media only screen and (max-width: 1100px) and (min-width: 576px) {
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
     #h1 {
         color: blue;
-        width: 35%;
-        top: 25%;
+        width: 50%;
+        top: 20%;
+        transform: translate(-10%, -80%) rotate(-30deg);
+
     }
 }
 
-@media only screen and (min-width: 1200px) {
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
     #h1 {
-        color: red;
+        color: orange;
+        transform: translate(30%, -70%) rotate(-180deg);
     }
 }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #h1 {
+        color: pink;
+        top: 40%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+}
+
+
+/* @media only screen and (max-width: 1024px) and (min-width: 576px) {
+    #h1 {
+        width: 35%;
+        top: 25%;
+    }
+} */
 
 /* Centra el texto y la imagen dentro del contenedor */
 #counter,
 #counter-image {
     text-align: center;
+
 }
 
 /* Oculta la imagen y establece su ancho */
 #counter-image {
     display: none;
-    width: 400px;
+    width: 80%;
+    height: 90%;
+    /* Establece el ajuste de objeto de la imagen para cubrir el área de visualización */
 }
 
 /* Estiliza el contador y establece su tamaño de fuente, margen, padding, color de fondo, bordes y sombra */

@@ -21,7 +21,7 @@ var counter = setInterval(function () {
     " segons per al 21 de Març.";
 
   if (tiempoRestante < 0) {
-    clearInterval(contador);
+    clearInterval(counter);
     document.getElementById("counter").style.display = "none";
     document.getElementById("counter-image").style.display = "block";
   }
