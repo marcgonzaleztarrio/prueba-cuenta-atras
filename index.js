@@ -9,16 +9,10 @@ var counter = setInterval(function () {
   var minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
   var segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
 
-  document.getElementById("counter").innerHTML =
-    "Faltan " +
-    dias +
-    " dies, " +
-    horas +
-    " hores, " +
-    minutos +
-    " minuts i " +
-    segundos +
-    " segons per al 21 de Març.";
+  document.getElementById("counter-days").innerHTML = dias + "<br/>dies";
+  document.getElementById("counter-horas").innerHTML = horas + "<br/>horas";
+  document.getElementById("counter-mins").innerHTML = minutos + "<br/>minuts";
+  document.getElementById("counter-secs").innerHTML = segundos + "<br/>segons";
 
   if (tiempoRestante < 0) {
     clearInterval(counter);

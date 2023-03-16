@@ -14,6 +14,7 @@
     right: 10vh;
     display: flex;
     font-family: 'Climate Crisis', cursive;
+    text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
 }
 
 #h1 {
@@ -23,6 +24,7 @@
     left: 10vh;
     display: flex;
     font-family: 'Climate Crisis', cursive;
+    text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -106,13 +108,13 @@
 
 /* Estiliza el contador y establece su tamaño de fuente, margen, padding, color de fondo, bordes y sombra */
 #counter {
+    display: flex;
+    margin: 10px;
     font-size: 2em;
-    margin-top: 20px;
-    padding: 20px;
+    padding: 50px;
     background-color: var(--background-color, #f5f5f5);
     border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    display: inline-block;
+    box-shadow: 10px 30px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* Establece las propiedades básicas del cuerpo de la página */
@@ -121,5 +123,5 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: var(--background-color, rgb(255, 255, 255));
+    background-color: var(--background-color, rgba(236, 231, 231, 0.863));
 }
