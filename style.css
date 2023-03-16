@@ -31,9 +31,9 @@
 @media only screen and (min-width: 768px) {
     #h1-2 {
         color: rgba(0, 0, 255, 0.5);
-        width: 10%;
-        top: 10%;
-        transform: translate(-650%, -5%) rotate(0deg);
+        width: 100%;
+        font-size: 8vh;
+        transform: translate(30%, 100%) rotate(0deg);
 
     }
 }
@@ -42,9 +42,9 @@
 @media only screen and (min-width: 768px) {
     #h1 {
         color: rgba(0, 0, 255, 0.5);
-        width: 10%;
-        top: 20%;
-        transform: translate(45%, 300%) rotate(0deg);
+        width: 100%;
+        font-size: 8vh;
+        transform: translate(-6%, 250%) rotate(0deg);
 
     }
 }
