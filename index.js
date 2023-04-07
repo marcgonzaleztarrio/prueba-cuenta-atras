@@ -1,4 +1,4 @@
-var fechaObjetivo = new Date("Mar 21, 2023 18:00:00").getTime();
+var fechaObjetivo = new Date("May 17, 2023 09:00:00").getTime();
 var counter = setInterval(function () {
   var fechaActual = new Date().getTime();
   var tiempoRestante = fechaObjetivo - fechaActual;
@@ -13,10 +13,4 @@ var counter = setInterval(function () {
   document.getElementById("counter-hores").innerHTML = horas + "<br/>Hores";
   document.getElementById("counter-mins").innerHTML = minutos + "<br/>Minuts";
   document.getElementById("counter-secs").innerHTML = segundos + "<br/>Segons";
-
-  if (tiempoRestante < 0) {
-    clearInterval(counter);
-    document.getElementById("counter").style.display = "none";
-    document.getElementById("counter-image").style.display = "block";
-  }
 }, 1000);

@@ -1,135 +1,415 @@
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* Centra verticalmente y horizontalmente los elementos en el contenedor */
-#counter-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 100px;
+    padding: 100px;
+}
+
+.grid-item {
+    color: white;
+    text-align: center;
 }
 
 #h1-2 {
     font-size: 10vh;
-    position: fixed;
+    position: absolute;
     right: 10vh;
     display: flex;
-    font-family: 'Climate Crisis', cursive;
+    font-family: 'Press Start 2P', cursive;
     text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
+    transform: translate(50%, 500%) rotate(90deg);
+    bottom: 80%;
 }
 
 #h1 {
     font-size: 10vh;
-    position: fixed;
-    top: 40%;
+    position: absolute;
+    top: 50%;
     left: 10vh;
-    display: flex;
-    font-family: 'Climate Crisis', cursive;
+    display: block;
+    font-family: 'Press Start 2P', cursive;
     text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
+    transform: translate(-50%, -300%) rotate(-90deg);
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    #h1-2 {
-        color: rgba(0, 0, 255, 0.5);
-        width: 100%;
-        font-size: 8vh;
-        transform: translate(25%, 600%) rotate(0deg);
 
+.flier {
+    pointer-events: none;
+}
+
+.flier>* {
+    /* Adjust animation duration to change the element’s speed */
+    animation: fly 50s linear infinite;
+    pointer-events: none !important;
+    top: 0;
+    left: 0;
+    transform: translateX(-120%) translateY(-120%) rotateZ(0);
+    position: fixed;
+    animation-delay: 1s;
+    z-index: 999999;
+    width: 6rem;
+
+}
+
+
+@media only screen and (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: auto;
+        margin-top: 50%;
     }
+
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    #h1 {
-        color: rgba(0, 0, 255, 0.5);
-        width: 100%;
-        font-size: 8vh;
-        transform: translate(-7%, -250%) rotate(0deg);
-
-    }
-}
-
-/* Cortinillaaaaaaaaaaaa */
-
-
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    #h1-2 {
-        color: rgba(0, 0, 255, 0.5);
-        transform: translate(54%, 420%) rotate(0deg);
-        font-size: 10vh;
-
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 100px;
+        padding: 100px;
+        margin-top: 0;
     }
 }
 
+/* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    #h1 {
-        color: rgba(0, 0, 255, 0.5);
-        transform: translate(7%, -180%) rotate(0deg);
-        font-size: 10vh;
 
+@keyframes fly {
+
+    98.001%,
+    0% {
+        display: block;
+        transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+    }
+
+    15% {
+        transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+    }
+
+    15.001%,
+    18% {
+        transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+    }
+
+    40% {
+        transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+    }
+
+    40.001%,
+    43% {
+        transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+    }
+
+    65% {
+        transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+    }
+
+    65.001%,
+    68% {
+        transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+    }
+
+    95% {
+        transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
     }
 }
 
-/* Cortinillaaaaaaaaaaaa */
+/* 
+    Teletext stylesheet 
+    Galax 2014-2015 http://galax.xyz
+    
+    MODE7GX3.TTF font by Galax 2014 - based on ModeSeven, created in 1998 by Andrew Bulhak
+*/
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    #h1-2 {
-        color: rgba(0, 0, 255, 0.5);
-        top: 40%;
-        transform: translate(50%, 500%) rotate(90deg);
-        font-size: 10vh;
-
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    #h1 {
-        color: rgba(0, 0, 255, 0.5);
-        top: 0%;
-        transform: translate(-50%, -300%) rotate(-90deg);
-        font-size: 10vh;
-
-    }
-}
-
-/* Cortinillaaaaaaaaaaaa */
-
-/* Centra el texto y la imagen dentro del contenedor */
-#counter,
-#counter-image {
-    text-align: center;
-
-}
-
-/* Oculta la imagen y establece su ancho */
-#counter-image {
-    display: none;
-    width: 80%;
-    height: 90%;
-    /* Establece el ajuste de objeto de la imagen para cubrir el área de visualización */
-}
-
-/* Estiliza el contador y establece su tamaño de fuente, margen, padding, color de fondo, bordes y sombra */
-#counter {
-    display: flex;
-    margin: 10px;
-    font-size: 2em;
-    padding: 50px;
-    background-color: var(--background-color, #f5f5f5);
-    border-radius: 10px;
-    box-shadow: 10px 30px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Establece las propiedades básicas del cuerpo de la página */
-body {
-    margin: 0;
+/* Hard reset */
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+section,
+summary,
+time,
+audio,
+video {
     padding: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: var(--background-color, rgba(236, 231, 231, 0.863));
+    margin: 0;
+    border: 0;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+}
+
+/* 
+    Teletext palette 
+    000000 0 black
+    ff0000 1 red
+    00ff00 2 green
+    ffff00 3 yellow
+    0000ff 4 blue
+    ff00ff 5 magenta
+    00ffff 6 cyan
+    ffffff 7 white
+*/
+
+
+a {
+    text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+    color: #00ffff;
+}
+
+/* visited link */
+a:visited {
+    color: #00ff00;
+}
+
+/* mouse over link */
+a:hover {
+    color: #ffff00;
+}
+
+a.yellow:hover,
+.yellow a:hover {
+    color: #00ff00;
+}
+
+/* selected link */
+a:active {
+    color: #ff0000;
+}
+
+a.yellow:active,
+.yellow a:active {
+    color: #ff0000;
+}
+
+a.red:active,
+.red a:active {
+    color: #ffff00;
+}
+
+/* flashing class, it's like the 'blink' tag is back */
+.flashing {
+    animation: flashing 1.3s steps(5, start) infinite;
+    -webkit-animation: flashing 1.3s steps(5, start) infinite;
+}
+
+@keyframes flashing {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes flashing {
+    to {
+        visibility: hidden;
+    }
+}
+
+/* concealed text is initially hidden, reveal by modifying class */
+.conceal {
+    opacity: 0;
+}
+
+.colour0,
+.black,
+a.black,
+.black a {
+    color: #000000;
+}
+
+.colour1,
+.red,
+a.red,
+.red a {
+    color: #ff0000;
+}
+
+.colour2,
+.green,
+a.green,
+.green a {
+    color: #00ff00;
+}
+
+.colour3,
+.yellow,
+a.yellow,
+.yellow a {
+    color: #ffff00;
+}
+
+.colour4,
+.blue,
+a.blue,
+.blue a {
+    color: #0000ff;
+}
+
+.colour5,
+.magenta,
+a.magenta,
+.magenta a {
+    color: #ff00ff;
+}
+
+.colour6,
+.cyan,
+a.cyan,
+.cyan a {
+    color: #00ffff;
+}
+
+.colour7,
+.white,
+a.white,
+.white a {
+    color: #ffffff;
+}
+
+.colour0bg,
+.blackbg {
+    background-color: #000000;
+}
+
+.colour1bg,
+.redbg {
+    background-color: #ff0000;
+}
+
+.colour2bg,
+.greenbg {
+    background-color: #00ff00;
+}
+
+.colour3bg,
+.yellowbg {
+    background-color: #ffff00;
+}
+
+.colour4bg,
+.bluebg {
+    background-color: #0000ff;
+}
+
+.colour5bg,
+.magentabg {
+    background-color: #ff00ff;
+}
+
+.colour6bg,
+.cyanbg {
+    background-color: #00ffff;
+}
+
+.colour7bg,
+.whitebg {
+    background-color: #ffffff;
+}
+
+@font-face {
+    font-family: Mode7;
+    src: url('MODE7GX3.TTF'), url('MODE7GX3.EOT');
+    /* .EOT is for IE */
+}
+
+body,
+td.teletext {
+    font-family: Mode7, monospace, courier, fixed;
+    font-size: 70px;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    color: #ffffff;
+    background: #000000;
+    /* line-height: 20px; */
+}
+
+body {
+    border-width: 20px 20px 20px 20px;
+    /* t r b l */
+    padding: 20px;
+}
+
+.teletext {
+    text-align: left;
+    white-space: pre;
+    display: block;
+    font-size: 20px;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
 }
