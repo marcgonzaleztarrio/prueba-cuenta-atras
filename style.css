@@ -51,7 +51,6 @@
     position: fixed;
     animation-delay: 1s;
     z-index: 999999;
-    width: 6rem;
 }
 
 
@@ -64,8 +63,6 @@
     .flier>* {
         width: 20rem;
     }
-
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -75,6 +72,10 @@
         gap: 100px;
         padding: 100px;
         margin-top: 0;
+    }
+
+    .flier>* {
+        width: 10rem;
     }
 }
 
