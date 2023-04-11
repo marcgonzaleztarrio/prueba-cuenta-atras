@@ -63,6 +63,30 @@
     .flier>* {
         width: 20rem;
     }
+
+    #h1-2 {
+        font-size: 7vh;
+        position: absolute;
+        right: 7vh;
+        display: flex;
+        font-family: 'Press Start 2P', cursive;
+        text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
+        transform: translate(50%, 500%) rotate(90deg);
+        bottom: 60%;
+    }
+
+    #h1 {
+        font-size: 7vh;
+        position: absolute;
+        top: 40%;
+        left: 7vh;
+        display: block;
+        font-family: 'Press Start 2P', cursive;
+        text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
+        transform: translate(-50%, -300%) rotate(-90deg);
+    }
+
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -77,6 +101,30 @@
     .flier>* {
         width: 10rem;
     }
+
+
+    #h1-2 {
+        font-size: 10vh;
+        position: absolute;
+        right: 10vh;
+        display: flex;
+        font-family: 'Press Start 2P', cursive;
+        text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
+        transform: translate(50%, 500%) rotate(90deg);
+        bottom: 80%;
+    }
+
+    #h1 {
+        font-size: 10vh;
+        position: absolute;
+        top: 50%;
+        left: 10vh;
+        display: block;
+        font-family: 'Press Start 2P', cursive;
+        text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
+        transform: translate(-50%, -300%) rotate(-90deg);
+    }
+
 }
 
 /* Keyframe values control where the element will begin
@@ -388,14 +436,14 @@ a.white,
 }
 
 @font-face {
-    font-family: Mode7;
+    font-family: 'Press Start 2P', cursive;
     src: url('MODE7GX3.TTF'), url('MODE7GX3.EOT');
     /* .EOT is for IE */
 }
 
 body,
 td.teletext {
-    font-family: Mode7, monospace, courier, fixed;
+    font-family: 'Press Start 2P', cursive;
     font-size: 70px;
     font-smooth: never;
     -webkit-font-smoothing: none;
