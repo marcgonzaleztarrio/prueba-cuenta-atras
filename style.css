@@ -50,7 +50,19 @@
     transform: translateX(-120%) translateY(-120%) rotateZ(0);
     position: fixed;
     animation-delay: 1s;
+    z-index: 99999;
+}
+
+.textFlier {
+    animation: nashe 50s linear infinite;
+    pointer-events: none !important;
+    top: 100px;
+    left: 200px;
+    transform: translateX(-120%) translateY(-120%) rotateZ(0);
+    position: fixed;
+    animation-delay: 1s;
     z-index: 999999;
+    font-size: 1rem;
 }
 
 
@@ -62,6 +74,10 @@
 
     .flier>* {
         width: 20rem;
+    }
+
+    .textFlier {
+        font-size: 2rem;
     }
 
     #h1-2 {
@@ -101,6 +117,7 @@
     .flier>* {
         width: 10rem;
     }
+
 
 
     #h1-2 {
@@ -171,6 +188,91 @@
         transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
     }
 }
+
+@keyframes nashe {
+    0% {
+        transform: translateX(0) translateY(0) rotateZ(0deg);
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(40vw) translateY(10vh) rotateZ(0deg);
+
+    }
+
+    35% {
+        transform: translateX(80vw) translateY(20vh) rotateZ(180deg);
+
+    }
+
+    50% {
+        transform: translateX(60vw) translateY(60vh) rotateZ(0deg);
+        opacity: 0;
+    }
+
+    65% {
+        transform: translateX(40vw) translateY(80vh) rotateZ(180deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(10vw) translateY(20vh) rotateZ(0deg);
+    }
+
+    95% {
+        transform: translateX(20vw) translateY(40vh) rotateZ(180deg);
+    }
+
+    100% {
+        transform: translateX(50vw) translateY(20vh) rotateZ(0deg);
+
+    }
+}
+
+.textFlier text {
+    fill: #f00;
+    /* color inicial del texto */
+}
+
+/* agregue las siguientes reglas para cambiar el color del texto en el keyframe */
+@keyframes changeColor {
+    0% {
+        fill: #f00;
+    }
+
+    35% {
+        fill: #0f0;
+    }
+
+    50% {
+        fill: #00f;
+    }
+
+    65% {
+        fill: #f0f;
+    }
+
+    80% {
+        fill: #0ff;
+    }
+
+    95% {
+        fill: #ff0;
+    }
+
+    100% {
+        fill: #f00;
+    }
+}
+
+.textFlier text {
+    animation: changeColor 50s linear infinite;
+}
+
 
 /* 
     Teletext stylesheet 
