@@ -1,24 +1,14 @@
 <!DOCTYPE html>
-<html lang="cat">
-  <link rel="shortcut icon" href="marcIcon.png" />
+<html lang="en">
   <head>
-    <title>Marc va a Vienna</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa Viena</title>
     <link rel="stylesheet" href="style.css" />
-    <style></style>
-    <!-- Este archivo HTML es la página principal del sitio web "Mariaaas Return".
-         Contiene un canvas y un contador que se activa cuando se carga la página.
-         También carga un archivo de estilo CSS y un archivo de script JavaScript. -->
   </head>
   <body>
-    <div class="textFlier">
-      <svg>
-        <text x="30" y="15" fill="red" transform="rotate(30 20,40)">
-          T'estimu
-        </text>
-      </svg>
-    </div>
-
-    <div class="flier">
+    <a class="corazonMelon" href="index.html">
       <svg
         version="1.1"
         id="Layer_1"
@@ -60,29 +50,13 @@
      c0.3-10.4,0.3-20.7,0-31.1c-0.3-6.7,2.1-9.1,8.5-8.5c0.9,0,1.8,0,2.7,0C312.7,256.3,299.2,243.8,301.1,297.4z"
         />
       </svg>
+    </a>
+    <div class="mapita">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1ka8rhAWiD7-fZeQ1Tgi5RqCj8uqWG9U&ehbc=2E312F"
+        width="1240"
+        height="780"
+      ></iframe>
     </div>
-
-    <div class="loko">
-      <h1 id="h1" class="green flashing">Marc</h1>
-      <h1 id="h1-2" class="magenta flashing">Maria</h1>
-    </div>
-    <div class="grid-container">
-      <div class="grid-item yellow">
-        <div id="counter-days"></div>
-      </div>
-      <div class="grid-item cyan">
-        <div id="counter-hores"></div>
-      </div>
-      <div class="grid-item blue">
-        <div id="counter-mins"></div>
-      </div>
-      <div class="grid-item red">
-        <div id="counter-secs"></div>
-      </div>
-    </div>
-    <div class="botonMapa">
-      <a href="./mapa.html" class="mapaBtn">La ruta de l'AMOR 📍</a>
-    </div>
-    <script src="index.js"></script>
   </body>
 </html>

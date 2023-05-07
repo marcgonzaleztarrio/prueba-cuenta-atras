@@ -1,278 +1,277 @@
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
+.corazonMelon {
+  width: 100px;
+  display: flex;
+}
+.botonMapa {
+  display: flex;
+  justify-content: center;
+}
+
+.mapaBtn {
+  font-size: 12px;
+}
 
 .grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 100px;
+  padding: 100px;
+}
+
+.grid-item {
+  color: white;
+  text-align: center;
+}
+
+#h1-2 {
+  font-size: 10vh;
+  position: absolute;
+  right: 10vh;
+  display: flex;
+  font-family: "Press Start 2P", cursive;
+  text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
+  transform: translate(50%, 500%) rotate(90deg);
+  bottom: 80%;
+}
+
+#h1 {
+  font-size: 10vh;
+  position: absolute;
+  top: 50%;
+  left: 10vh;
+  display: block;
+  font-family: "Press Start 2P", cursive;
+  text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
+  transform: translate(-50%, -300%) rotate(-90deg);
+}
+
+.flier {
+  pointer-events: none;
+}
+
+.flier > * {
+  /* Adjust animation duration to change the element’s speed */
+  animation: fly 50s linear infinite;
+  pointer-events: none !important;
+  top: 0;
+  left: 0;
+  transform: translateX(-120%) translateY(-120%) rotateZ(0);
+  position: fixed;
+  animation-delay: 1s;
+  z-index: 99999;
+}
+
+.textFlier {
+  animation: nashe 50s linear infinite;
+  pointer-events: none !important;
+  top: 100px;
+  left: 200px;
+  transform: translateX(-120%) translateY(-120%) rotateZ(0);
+  position: fixed;
+  animation-delay: 1s;
+  z-index: 999999;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: auto;
+    margin-top: 30%;
+  }
+
+  .flier > * {
+    width: 20rem;
+  }
+
+  .textFlier {
+    font-size: 2rem;
+  }
+
+  #h1-2 {
+    font-size: 7vh;
+    position: absolute;
+    right: 7vh;
+    display: flex;
+    font-family: "Press Start 2P", cursive;
+    text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
+    transform: translate(50%, 500%) rotate(90deg);
+    bottom: 60%;
+  }
+
+  #h1 {
+    font-size: 7vh;
+    position: absolute;
+    top: 40%;
+    left: 7vh;
+    display: block;
+    font-family: "Press Start 2P", cursive;
+    text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
+    transform: translate(-50%, -300%) rotate(-90deg);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .grid-container {
     display: grid;
     grid-template-columns: auto auto;
     gap: 100px;
     padding: 100px;
-}
+    margin-top: 0;
+  }
 
-.grid-item {
-    color: white;
-    text-align: center;
-}
+  .flier > * {
+    width: 10rem;
+  }
 
-#h1-2 {
+  #h1-2 {
     font-size: 10vh;
     position: absolute;
     right: 10vh;
     display: flex;
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Press Start 2P", cursive;
     text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
     transform: translate(50%, 500%) rotate(90deg);
     bottom: 80%;
-}
+  }
 
-#h1 {
+  #h1 {
     font-size: 10vh;
     position: absolute;
     top: 50%;
     left: 10vh;
     display: block;
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Press Start 2P", cursive;
     text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
     transform: translate(-50%, -300%) rotate(-90deg);
-}
-
-
-.flier {
-    pointer-events: none;
-}
-
-.flier>* {
-    /* Adjust animation duration to change the element’s speed */
-    animation: fly 50s linear infinite;
-    pointer-events: none !important;
-    top: 0;
-    left: 0;
-    transform: translateX(-120%) translateY(-120%) rotateZ(0);
-    position: fixed;
-    animation-delay: 1s;
-    z-index: 99999;
-}
-
-.textFlier {
-    animation: nashe 50s linear infinite;
-    pointer-events: none !important;
-    top: 100px;
-    left: 200px;
-    transform: translateX(-120%) translateY(-120%) rotateZ(0);
-    position: fixed;
-    animation-delay: 1s;
-    z-index: 999999;
-    font-size: 1rem;
-}
-
-
-@media only screen and (min-width: 600px) {
-    .grid-container {
-        grid-template-columns: auto;
-        margin-top: 30%;
-    }
-
-    .flier>* {
-        width: 20rem;
-    }
-
-    .textFlier {
-        font-size: 2rem;
-    }
-
-    #h1-2 {
-        font-size: 7vh;
-        position: absolute;
-        right: 7vh;
-        display: flex;
-        font-family: 'Press Start 2P', cursive;
-        text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
-        transform: translate(50%, 500%) rotate(90deg);
-        bottom: 60%;
-    }
-
-    #h1 {
-        font-size: 7vh;
-        position: absolute;
-        top: 40%;
-        left: 7vh;
-        display: block;
-        font-family: 'Press Start 2P', cursive;
-        text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
-        transform: translate(-50%, -300%) rotate(-90deg);
-    }
-
-
-}
-
-@media only screen and (min-width: 992px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 100px;
-        padding: 100px;
-        margin-top: 0;
-    }
-
-    .flier>* {
-        width: 10rem;
-    }
-
-
-
-    #h1-2 {
-        font-size: 10vh;
-        position: absolute;
-        right: 10vh;
-        display: flex;
-        font-family: 'Press Start 2P', cursive;
-        text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
-        transform: translate(50%, 500%) rotate(90deg);
-        bottom: 80%;
-    }
-
-    #h1 {
-        font-size: 10vh;
-        position: absolute;
-        top: 50%;
-        left: 10vh;
-        display: block;
-        font-family: 'Press Start 2P', cursive;
-        text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
-        transform: translate(-50%, -300%) rotate(-90deg);
-    }
-
+  }
 }
 
 /* Keyframe values control where the element will begin
     and end its trajectory across the screen. Each rule
     represents a path the element follows across the screen. */
 
-
 @keyframes fly {
+  98.001%,
+  0% {
+    display: block;
+    transform: translateX(-200%) translateY(100vh) rotateZ(0deg);
+  }
 
-    98.001%,
-    0% {
-        display: block;
-        transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
-    }
+  15% {
+    transform: translateX(100vw) translateY(-100%) rotateZ(180deg);
+  }
 
-    15% {
-        transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
-    }
+  15.001%,
+  18% {
+    transform: translateX(100vw) translateY(-30%) rotateZ(0deg);
+  }
 
-    15.001%,
-    18% {
-        transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
-    }
+  40% {
+    transform: translateX(-200%) translateY(3vh) rotateZ(-180deg);
+  }
 
-    40% {
-        transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
-    }
+  40.001%,
+  43% {
+    transform: translateX(-200%) translateY(-100%) rotateZ(-180deg);
+  }
 
-    40.001%,
-    43% {
-        transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
-    }
+  65% {
+    transform: translateX(100vw) translateY(50vh) rotateZ(0deg);
+  }
 
-    65% {
-        transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
-    }
+  65.001%,
+  68% {
+    transform: translateX(20vw) translateY(-200%) rotateZ(180deg);
+  }
 
-    65.001%,
-    68% {
-        transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
-    }
-
-    95% {
-        transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
-    }
+  95% {
+    transform: translateX(10vw) translateY(100vh) rotateZ(0deg);
+  }
 }
 
 @keyframes nashe {
-    0% {
-        transform: translateX(0) translateY(0) rotateZ(0deg);
-        opacity: 0;
-    }
+  0% {
+    transform: translateX(0) translateY(0) rotateZ(0deg);
+    opacity: 0;
+  }
 
-    5% {
-        opacity: 1;
-    }
+  5% {
+    opacity: 1;
+  }
 
-    20% {
-        transform: translateX(40vw) translateY(10vh) rotateZ(0deg);
+  20% {
+    transform: translateX(40vw) translateY(10vh) rotateZ(0deg);
+  }
 
-    }
+  35% {
+    transform: translateX(80vw) translateY(20vh) rotateZ(180deg);
+  }
 
-    35% {
-        transform: translateX(80vw) translateY(20vh) rotateZ(180deg);
+  50% {
+    transform: translateX(60vw) translateY(60vh) rotateZ(0deg);
+    opacity: 0;
+  }
 
-    }
+  65% {
+    transform: translateX(40vw) translateY(80vh) rotateZ(180deg);
+    opacity: 1;
+  }
 
-    50% {
-        transform: translateX(60vw) translateY(60vh) rotateZ(0deg);
-        opacity: 0;
-    }
+  80% {
+    transform: translateX(10vw) translateY(20vh) rotateZ(0deg);
+  }
 
-    65% {
-        transform: translateX(40vw) translateY(80vh) rotateZ(180deg);
-        opacity: 1;
-    }
+  95% {
+    transform: translateX(20vw) translateY(40vh) rotateZ(180deg);
+  }
 
-    80% {
-        transform: translateX(10vw) translateY(20vh) rotateZ(0deg);
-    }
-
-    95% {
-        transform: translateX(20vw) translateY(40vh) rotateZ(180deg);
-    }
-
-    100% {
-        transform: translateX(50vw) translateY(20vh) rotateZ(0deg);
-
-    }
+  100% {
+    transform: translateX(50vw) translateY(20vh) rotateZ(0deg);
+  }
 }
 
 .textFlier text {
-    fill: #f00;
-    /* color inicial del texto */
+  fill: #f00;
+  /* color inicial del texto */
 }
 
 /* agregue las siguientes reglas para cambiar el color del texto en el keyframe */
 @keyframes changeColor {
-    0% {
-        fill: #f00;
-    }
+  0% {
+    fill: #f00;
+  }
 
-    35% {
-        fill: #0f0;
-    }
+  35% {
+    fill: #0f0;
+  }
 
-    50% {
-        fill: #00f;
-    }
+  50% {
+    fill: #00f;
+  }
 
-    65% {
-        fill: #f0f;
-    }
+  65% {
+    fill: #f0f;
+  }
 
-    80% {
-        fill: #0ff;
-    }
+  80% {
+    fill: #0ff;
+  }
 
-    95% {
-        fill: #ff0;
-    }
+  95% {
+    fill: #ff0;
+  }
 
-    100% {
-        fill: #f00;
-    }
+  100% {
+    fill: #f00;
+  }
 }
 
 .textFlier text {
-    animation: changeColor 50s linear infinite;
+  animation: changeColor 50s linear infinite;
 }
-
 
 /* 
     Teletext stylesheet 
@@ -359,11 +358,11 @@ summary,
 time,
 audio,
 video {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    font-smooth: never;
-    -webkit-font-smoothing: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
 }
 
 /* 
@@ -378,193 +377,201 @@ video {
     ffffff 7 white
 */
 
-
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* unvisited link */
 a:link {
-    color: #00ffff;
+  color: #00ffff;
 }
 
 /* visited link */
 a:visited {
-    color: #00ff00;
+  color: #00ff00;
 }
 
 /* mouse over link */
 a:hover {
-    color: #ffff00;
+  color: #ffff00;
 }
 
 a.yellow:hover,
 .yellow a:hover {
-    color: #00ff00;
+  color: #00ff00;
 }
 
 /* selected link */
 a:active {
-    color: #ff0000;
+  color: #ff0000;
 }
 
 a.yellow:active,
 .yellow a:active {
-    color: #ff0000;
+  color: #ff0000;
 }
 
 a.red:active,
 .red a:active {
-    color: #ffff00;
+  color: #ffff00;
 }
 
 /* flashing class, it's like the 'blink' tag is back */
 .flashing {
-    animation: flashing 1.3s steps(5, start) infinite;
-    -webkit-animation: flashing 1.3s steps(5, start) infinite;
+  animation: flashing 1.3s steps(5, start) infinite;
+  -webkit-animation: flashing 1.3s steps(5, start) infinite;
 }
 
 @keyframes flashing {
-    to {
-        visibility: hidden;
-    }
+  to {
+    visibility: hidden;
+  }
 }
 
 @-webkit-keyframes flashing {
-    to {
-        visibility: hidden;
-    }
+  to {
+    visibility: hidden;
+  }
 }
 
 /* concealed text is initially hidden, reveal by modifying class */
 .conceal {
-    opacity: 0;
+  opacity: 0;
 }
 
 .colour0,
 .black,
 a.black,
 .black a {
-    color: #000000;
+  color: #000000;
 }
 
 .colour1,
 .red,
 a.red,
 .red a {
-    color: #ff0000;
+  color: #ff0000;
 }
 
 .colour2,
 .green,
 a.green,
 .green a {
-    color: #00ff00;
+  color: #00ff00;
 }
 
 .colour3,
 .yellow,
 a.yellow,
 .yellow a {
-    color: #ffff00;
+  color: #ffff00;
 }
 
 .colour4,
 .blue,
 a.blue,
 .blue a {
-    color: #0000ff;
+  color: #0000ff;
 }
 
 .colour5,
 .magenta,
 a.magenta,
 .magenta a {
-    color: #ff00ff;
+  color: #ff00ff;
 }
 
 .colour6,
 .cyan,
 a.cyan,
 .cyan a {
-    color: #00ffff;
+  color: #00ffff;
 }
 
 .colour7,
 .white,
 a.white,
 .white a {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .colour0bg,
 .blackbg {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 .colour1bg,
 .redbg {
-    background-color: #ff0000;
+  background-color: #ff0000;
 }
 
 .colour2bg,
 .greenbg {
-    background-color: #00ff00;
+  background-color: #00ff00;
 }
 
 .colour3bg,
 .yellowbg {
-    background-color: #ffff00;
+  background-color: #ffff00;
 }
 
 .colour4bg,
 .bluebg {
-    background-color: #0000ff;
+  background-color: #0000ff;
 }
 
 .colour5bg,
 .magentabg {
-    background-color: #ff00ff;
+  background-color: #ff00ff;
 }
 
 .colour6bg,
 .cyanbg {
-    background-color: #00ffff;
+  background-color: #00ffff;
 }
 
 .colour7bg,
 .whitebg {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 @font-face {
-    font-family: 'Press Start 2P', cursive;
-    src: url('MODE7GX3.TTF'), url('MODE7GX3.EOT');
-    /* .EOT is for IE */
+  font-family: "Press Start 2P", cursive;
+  src: url("MODE7GX3.TTF"), url("MODE7GX3.EOT");
+  /* .EOT is for IE */
 }
 
 body,
 td.teletext {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 70px;
-    font-smooth: never;
-    -webkit-font-smoothing: none;
-    color: #ffffff;
-    background: #000000;
-    /* line-height: 20px; */
+  font-family: "Press Start 2P", cursive;
+  font-size: 70px;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  color: #ffffff;
+  background: #000000;
+  /* line-height: 20px; */
 }
 
 body {
-    border-width: 20px 20px 20px 20px;
-    /* t r b l */
-    padding: 20px;
+  border-width: 20px 20px 20px 20px;
+  /* t r b l */
+  padding: 20px;
 }
 
 .teletext {
-    text-align: left;
-    white-space: pre;
-    display: block;
-    font-size: 20px;
-    font-smooth: never;
-    -webkit-font-smoothing: none;
+  text-align: left;
+  white-space: pre;
+  display: block;
+  font-size: 20px;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}
+
+.mapita {
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  border: none;
 }
