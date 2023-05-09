@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
+#clockdate {
+  display: flex;
+  width: 20px;
+  margin-left: 30px;
+}
+
 .corazonMelon {
   width: 100px;
   display: flex;
