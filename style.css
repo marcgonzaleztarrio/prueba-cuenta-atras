@@ -15,6 +15,13 @@
   display: flex;
   justify-content: center;
 }
+.prueba123 {
+  width: 95px;
+  line-height: 2;
+  justify-content: center;
+  text-align: center;
+  font-size: 1px;
+}
 
 .mapaBtn {
   font-size: 22px;
