@@ -1,4 +1,4 @@
-var fechaObjetivo = new Date("Jul 6, 2023 08:45:00").getTime();
+var fechaObjetivo = new Date("Sept 1, 2023 00:00:00").getTime();
 var counter = setInterval(function () {
   var fechaActual = new Date().getTime();
   var tiempoRestante = fechaObjetivo - fechaActual;
