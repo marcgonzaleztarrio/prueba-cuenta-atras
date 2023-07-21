@@ -22,11 +22,12 @@
   justify-content: center;
 }
 .prueba123 {
-  width: 95px;
-  line-height: 2;
+  font-family: monospace;
+  white-space: pre;
   justify-content: center;
   text-align: center;
-  font-size: 1px;
+  font-size: 10px;
+  width: 500px;
 }
 
 .mapaBtn {
