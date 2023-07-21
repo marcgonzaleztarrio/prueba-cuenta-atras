@@ -1,4 +1,4 @@
-var fechaObjetivo = new Date("Jun 8, 2023 09:00:00").getTime();
+var fechaObjetivo = new Date("Aug 30, 2023 08:05:00").getTime();
 var counter = setInterval(function () {
   var fechaActual = new Date().getTime();
   var tiempoRestante = fechaObjetivo - fechaActual;
@@ -20,7 +20,7 @@ function startTime() {
   var hr = today.getHours();
   var min = today.getMinutes();
   var sec = today.getSeconds();
-  //Add a zero in front of numbers<10
+  //Add a zero in front of numbers < 10
   min = checkTime(min);
   sec = checkTime(sec);
   document.getElementById("clock").innerHTML = hr + " -- " + min + " -- " + sec;
