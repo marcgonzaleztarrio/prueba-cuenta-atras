@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 #clockdate {
   display: flex;
   width: 20px;
@@ -15,9 +21,17 @@
   display: flex;
   justify-content: center;
 }
+.prueba123 {
+  width: 95px;
+  line-height: 2;
+  justify-content: center;
+  text-align: center;
+  font-size: 1px;
+}
 
 .mapaBtn {
-  font-size: 12px;
+  font-size: 22px;
+  color: #8800ff;
 }
 
 .grid-container {
