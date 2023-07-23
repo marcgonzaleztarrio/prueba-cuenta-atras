@@ -98,7 +98,61 @@
   font-size: 1rem;
 }
 
-@media only screen and (min-width: 600px) {
+
+
+/* Rest of your CSS code as it is. */
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 50px;
+  }
+
+  .grid-item {
+    text-align: center;
+  }
+
+  #h1-2,
+  #h1 {
+    font-size: 5vh;
+    position: static;
+    transform: none;
+  }
+
+  .textFlier {
+    font-size: 1.5rem;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .grid-container {
+    gap: 50px;
+    padding: 50px;
+  }
+
+  .grid-item {
+    text-align: center;
+  }
+
+  #h1-2,
+  #h1 {
+    font-size: 7vh;
+    position: static;
+    transform: none;
+  }
+
+  .textFlier {
+    font-size: 2rem;
+    top: 100px;
+    left: 200px;
+  }
+}
+
+
+/* @media only screen and (min-width: 600px) {
   .grid-container {
     grid-template-columns: auto;
     margin-top: 30%;
@@ -169,11 +223,8 @@
     text-shadow: 1px 1px 2px rgba(184, 23, 184, 0.452);
     transform: translate(-50%, -300%) rotate(-90deg);
   }
-}
+} */
 
-/* Keyframe values control where the element will begin
-    and end its trajectory across the screen. Each rule
-    represents a path the element follows across the screen. */
 
 @keyframes fly {
   98.001%,
@@ -597,3 +648,4 @@ body {
 iframe {
   border: none;
 }
+
