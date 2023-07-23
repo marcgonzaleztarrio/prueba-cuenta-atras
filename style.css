@@ -5,13 +5,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  border: 1px solid red !important;
 }
 
 #clockdate {
   display: flex;
-  width: 20px;
+  width: 140px;
   margin-left: 30px;
-  margin-top: -45px;
+  margin-top: -195px;
 }
 
 .corazonMelon {
